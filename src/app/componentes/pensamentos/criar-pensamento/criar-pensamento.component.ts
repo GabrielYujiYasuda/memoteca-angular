@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./criar-pensamento.component.css'],
 })
 export class CriarPensamentoComponent implements OnInit {
+  //Maybe here comes the external json
   pensamento = {
     id: '1',
     conteudo: 'Aprendendo Angular',
@@ -14,7 +15,11 @@ export class CriarPensamentoComponent implements OnInit {
   };
 
   criarPensamento() {
-    alert('Novo pensamento criado');
+    alert('!CRIADO!');
+  }
+
+  cancelarPensamento() {
+    alert('!CANCELADO!');
   }
 
   constructor() {}
