@@ -30,5 +30,17 @@ export class ExcluirPensamentoComponent {
     });
   }
 
-  excluirPensamento() {}
+  //TODO delete method
+  //TODO update method
+  excluirPensamento() {
+    if (this.pensamento.id) {
+      this.service.excluir(this.pensamento.id).subscribe(() => {
+        this.router.navigate(['/listarPensamento']);
+      });
+    }
+  }
+
+  cancelar() {
+    this.router.navigate(['/listarPensamento']);
+  }
 }
